@@ -1,16 +1,16 @@
 # easyKube
 
-CLI python application to easily configure and deploy simple services
-on your kubernetes.
+CLI python application for Kubernetes (K8s) easy deployment and management.
 
 # Features
 - Open Source
 - Python-based full CLI application
+
+### To be added
 - Automatic deployment
 - Legacy Kubernetes (k8s)
 - Logging on:
-	- User level (info)
-	- Developper level (debug, error)
+	- Debug + error level
 - Force option
 
 # Services to deploy
@@ -20,4 +20,4 @@ on your kubernetes.
 - Database servers
 	- MySQL
 	- PostgreSQL
-	- 
+	- MongoDB
