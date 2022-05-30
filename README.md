@@ -21,3 +21,4 @@ CLI python application for Kubernetes (K8s) easy deployment and management.
 	- MySQL
 	- PostgreSQL
 	- MongoDB
+	- Redis
