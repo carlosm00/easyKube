@@ -23,21 +23,15 @@ This is the templates directory, listed in sub-folders for each service listed a
 The full list of files is described on the table below:
 
 | File		                     | Decription                      |
-|                              Apache                              |
 | :----------------------------  | :------------------------------ |
 | apache_deployment              | Deployment template file        |
 | apache_service                 | Service template file           |
-|                              Nginx                               |
-| :----------------------------  | :------------------------------ |
 | nginx_deployment               | Deployment template file        |
 | nginx_service                  | Service template file           |
-|                              MySQL                               |
-| :----------------------------  | :------------------------------ |
 | mysql_deployment               | Deployment template file        |
 | mysql_service                  | Service template file           |
 | mysql_persistentvolume         | Persisten Volume template       |
 | mysql_persistentvolumeclaim    | Persisten Volume claim template |
 | mysql_secret_creation          | Service secrets template        |
-|                              Redis                               |
 | redis_deployment               | Deployment template file        |
 | redis_service                  | Service template file           |
