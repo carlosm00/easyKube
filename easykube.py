@@ -33,10 +33,31 @@ class EasyKube:
         # Setting client
         self.v1 = client.CoreV1Api()
 
+    ## Services
+    ### GET services from namespace
+    def list_services(self):
+        v1 = self.v1
+
+        print("Listing services")
+        request = v1.list_namespaced_service(NAMESPACE)
+        for i in request.items:
+            print("%s\t %s\t %s\t %s\t %s" % (i.metadata.name, i.spec.type, i.spec.cluster_ip, i.spec.external_i_ps, i.spec.ports))
+
+    ## Pods
+    ### GET all pods from namespace
+    def list_pods(self):
+        v1 = self.v1
+
+        print("Listing pods with their IPs:")
+        request = v1.list_namespaced_pod(NAMESPACE)
+        for i in request.items:
+            print("%s\t %s\t %s" % (i.metadata.name, i.status.phase, i.status.pod_ip))
+
 # Main function
 def main():
     mykube = EasyKube()
-
+    
+    mykube.list_services()
 
 if __name__ == "__main__":
     main()
