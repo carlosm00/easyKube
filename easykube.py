@@ -24,30 +24,18 @@ from kubernetes.client.rest import ApiException
 NAMESPACE = "easykube"
 
 
-# Action Function list
-## List Pods from namespace
-def list_pods():
-    print("Listing pods with their IPs:")
-    request = v1.list_namespaced_pod(NAMESPACE)
-    for i in request.items:
-        print("%s\t%s\t%s\t%s\t%s" % (i.metadata.name, i.status.pod_ip,
-                              i.metadata.namespace, i.metadata.name, i.status.phase))
+# Class for all actions
+class EasyKube:
+    def __init__(self):
+        # Loading K8s config
+        config.load_kube_config()
 
-## List Deployments
-def list_deployments():
-    print("Listing deployments:")
-    request = v1.list_namespaced_deployment(NAMESPACE, pretty=True, timeout_seconds=3, watch=False)
-    print(request)
-
-## 
+        # Setting client
+        self.v1 = client.CoreV1Api()
 
 # Main function
 def main():
-    # Loading K8s config
-    config.load_kube_config()
-
-    # Setting client
-    v1 = client.CoreV1Api()
+    mykube = EasyKube()
 
 
 if __name__ == "__main__":
