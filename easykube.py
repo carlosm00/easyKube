@@ -1,10 +1,11 @@
 """
 
-EasyKube
-
-CLI python application for Kubernetes (K8s) easy deployment
-and management with debug-level logs.
-YAML templates are stored on the templates folder.
+    Title: EasyKube
+    Author: Carlos Mena
+    Version: 1.0
+    Description: CLI python application for Kubernetes (K8s) easy deployment
+    and management with debug-level logs.
+    YAML templates are stored on the templates folder.
 
 Library importation
 """
@@ -16,6 +17,7 @@ import os
 import json
 import yaml
 import time
+import kubernetes
 from os import listdir
 from kubernetes import client, config
 from kubernetes.client.rest import ApiException
